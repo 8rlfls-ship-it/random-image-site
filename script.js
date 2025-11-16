@@ -9,6 +9,13 @@ const imageFiles = [
     '6.png',
     '7.png',
     '8.png',
+    '9.png',
+    '10.png',
+    '11.png',
+    '12.png',
+    '13.png',
+    '14.png',
+    '15.png',
 ];
 
 // 2. 랜덤 인덱스를 생성하는 함수
