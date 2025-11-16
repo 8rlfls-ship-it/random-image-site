@@ -1,16 +1,20 @@
 // 1. /images 폴더에 있는 모든 이미지 파일 이름을 배열에 정의합니다.
-// 파일 이름이 대소문자를 구분하는지 정확히 확인해주세요! (특히 GitHub에서는 중요)
+// 이 배열의 이름들은 GitHub images 폴더의 실제 파일 이름과 대소문자까지 일치해야 합니다.
 const imageFiles = [
-    'image1.jpg',
-    'image2.png',
-    'image3.gif',
-    'my_photo_4.jpeg',
-    // 여기에 모든 이미지 파일 이름을 추가합니다.
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
 ];
 
 // 2. 랜덤 인덱스를 생성하는 함수
 function getRandomIndex(max) {
     // Math.random()은 0 (포함)부터 1 (미포함) 사이의 숫자를 반환합니다.
+    // Math.floor를 사용하여 정수 인덱스(0, 1, 2, ...)를 얻습니다.
     return Math.floor(Math.random() * max);
 }
 
@@ -25,11 +29,11 @@ function displayRandomImage() {
     // 선택된 랜덤 이미지 파일 이름
     const randomFileName = imageFiles[randomIndex];
 
-    // HTML의 <img> 태그 요소 가져오기
+    // HTML의 <img id="random-image"> 태그 요소를 가져오기
     const imageElement = document.getElementById('random-image');
 
     // 이미지 소스(src)를 랜덤 파일 경로로 설정
-    // 경로는 'images/' 폴더 아래에 있는 파일입니다.
+    // 경로는 'images/' 폴더 아래에 있는 파일입니다. (폴더 이름은 모두 소문자 가정)
     imageElement.src = 'images/' + randomFileName;
 }
 
